@@ -57,7 +57,7 @@ nav {
 
 #cardHeadline {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 1em;
     img {
         width: 40%;
@@ -67,6 +67,10 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 50%;
+        p {
+            margin-bottom: 1em;
+        }
         div {
             display: flex;
             flex-direction: row;
@@ -100,13 +104,15 @@ nav {
             p {
                 opacity: 0;
                 transition: opacity 0.5s;
+                text-align: center;
+                padding: 1em;
             }
             &:hover {
                 background-image: none;
                 p {
                     opacity: 1;
+                    transition: opacity 2s;
                 }
-                transition: opacity 1s;
                 animation: appearDescr 0.5s forwards;
             }
         }

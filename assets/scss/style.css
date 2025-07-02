@@ -210,7 +210,7 @@ nav ul li:nth-of-type(3) {
 
 #cardHeadline {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 1em;
 }
 #cardHeadline img {
@@ -221,6 +221,10 @@ nav ul li:nth-of-type(3) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
+}
+#cardHeadline div p {
+  margin-bottom: 1em;
 }
 #cardHeadline div div {
   display: flex;
@@ -258,14 +262,16 @@ nav ul li:nth-of-type(3) {
 #imageContainer div.biggerDiv div p {
   opacity: 0;
   transition: opacity 0.5s;
+  text-align: center;
+  padding: 1em;
 }
 #imageContainer div.biggerDiv div:hover {
   background-image: none;
-  transition: opacity 1s;
   animation: appearDescr 0.5s forwards;
 }
 #imageContainer div.biggerDiv div:hover p {
   opacity: 1;
+  transition: opacity 2s;
 }
 @media screen and (min-width: 768px) {
   #imageContainer div.biggerDiv div {
