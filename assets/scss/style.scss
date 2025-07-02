@@ -1,0 +1,126 @@
+@import './partials/reset';
+@import './partials/colors';
+@import './partials/mixins';
+@import './partials/font';
+@import './partials/buttons';
+@import './partials/spacings';
+@import './partials/animations';
+
+header img {
+    @include floating(header);
+}
+
+nav {
+    background-color: $bg-hero;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 1em;
+            opacity: 0;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        li:nth-of-type(1) {
+                @include animation-type(discovery)
+            }
+        
+        li:nth-of-type(2) {
+                @include animation-type(login)
+            }
+        
+        li:nth-of-type(3) {
+                @include animation-type(contact)
+            }
+        
+        }
+}
+
+#headline {
+    border-bottom: 1px solid $bg-hero;
+    h1 {
+        font-size: 2em;
+        color: $bg-hero;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    img {
+        @include floating();
+    }
+}
+
+#cardHeadline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    img {
+        width: 40%;
+        height: auto;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+            display: flex;
+            flex-direction: row;
+            button {
+                margin-right: 1em;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+#imageContainer {
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 1em;
+        color: $bg-hero;
+    }
+    div.biggerDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        p {
+            opacity: 0;
+        }
+        div {
+            @include grid(2);
+            &:hover {
+                        transform: scale(1.1);
+                    }
+        }
+        @media screen and (min-width: 768px) {
+            div {
+                @include grid(4)
+            }
+        }
+        div:nth-of-type(1) {
+            background-image: url("https://www.singulart.com/blog/wp-content/uploads/2023/11/Katsushika-Hokusai.jpeg");
+            background-size: cover;
+        }
+        div:nth-of-type(2) {
+            background-image: url("https://data.ukiyo-e.org/mfa/images/sc226721.jpg");
+            background-size: cover;
+        }
+        div:nth-of-type(3) {
+            background-image: url("https://wallpaperaccess.com/full/16290.jpg");
+            background-size: cover;
+        }
+        div:nth-of-type(4) {
+            background-image: url("https://as1.ftcdn.net/v2/jpg/05/25/09/02/1000_F_525090285_6Li8luqiXy5C1VYeLgGcc4yfQlbdGS51.jpg");
+            background-size: cover;
+        }
+    }
+}

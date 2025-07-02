@@ -1,0 +1,26 @@
+$nav-el: discovery, login, contact;
+
+@each $el in $nav-el {
+    @keyframes #{$el} {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px)
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@mixin animation-type($el) {
+    @if $el == discovery {
+            animation: #{$el} 1s forwards; 
+        } @else if $el == login {
+            animation: #{$el} 1s 1s forwards;
+        } @else {
+            animation: #{$el} 1s 2s forwards;
+        }
+}
+

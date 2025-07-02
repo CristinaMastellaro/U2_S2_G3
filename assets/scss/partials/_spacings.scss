@@ -1,0 +1,26 @@
+$screen-margin: (
+    small: (0.5em), 
+    medium: (1em),
+    large: (1.2em),
+    x-large: (1.5em),
+    xx-large: (1.7em),
+    );
+
+$screen-padding: (
+    small: 1em, 
+    medium: 1em, 
+    large: 1.5em, 
+    x-large: 1.5em, 
+    xx-large: 1.8em); 
+
+    @each $name, $value in $screen-margin {
+        .spacing-#{$name} {
+            margin: $value;
+        }
+    }
+
+@each $name, $value in $screen-padding {
+        .spacing-#{$name} {
+            padding: $value;
+        }
+    }

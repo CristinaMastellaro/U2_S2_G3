@@ -1,0 +1,275 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+img {
+  height: 100px;
+}
+
+.btn-bluette {
+  background-color: #0e6cff;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 10px;
+}
+
+.btn-orangette {
+  background-color: #ff8700;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 10px;
+}
+
+.btn-greenette {
+  background-color: #4caf50;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 10px;
+}
+
+.spacing-small {
+  margin: 0.5em;
+}
+
+.spacing-medium {
+  margin: 1em;
+}
+
+.spacing-large {
+  margin: 1.2em;
+}
+
+.spacing-x-large {
+  margin: 1.5em;
+}
+
+.spacing-xx-large {
+  margin: 1.7em;
+}
+
+.spacing-small {
+  padding: 1em;
+}
+
+.spacing-medium {
+  padding: 1em;
+}
+
+.spacing-large {
+  padding: 1.5em;
+}
+
+.spacing-x-large {
+  padding: 1.5em;
+}
+
+.spacing-xx-large {
+  padding: 1.8em;
+}
+
+@keyframes discovery {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes login {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes contact {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header img {
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.49);
+  border: 1px solid lightblue;
+  height: 50px;
+}
+
+nav {
+  background-color: #640fc5;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 1em;
+  opacity: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li:nth-of-type(1) {
+  animation: discovery 1s forwards;
+}
+nav ul li:nth-of-type(2) {
+  animation: login 1s 1s forwards;
+}
+nav ul li:nth-of-type(3) {
+  animation: contact 1s 2s forwards;
+}
+
+#headline {
+  border-bottom: 1px solid #640fc5;
+}
+#headline h1 {
+  font-size: 2em;
+  color: #640fc5;
+  text-align: center;
+  margin-bottom: 1em;
+}
+#headline img {
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49);
+}
+
+#cardHeadline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+#cardHeadline img {
+  width: 40%;
+  height: auto;
+}
+#cardHeadline div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#cardHeadline div div {
+  display: flex;
+  flex-direction: row;
+}
+#cardHeadline div div button {
+  margin-right: 1em;
+}
+#cardHeadline div div button a {
+  text-decoration: none;
+  color: white;
+}
+
+#imageContainer h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em;
+  color: #640fc5;
+}
+#imageContainer div.biggerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#imageContainer div.biggerDiv p {
+  opacity: 0;
+}
+#imageContainer div.biggerDiv div {
+  width: 45%;
+  height: 200px;
+  margin: 0.5em;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49);
+}
+#imageContainer div.biggerDiv div:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 768px) {
+  #imageContainer div.biggerDiv div {
+    width: 22.5%;
+    height: 200px;
+    margin: 0.5em;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49);
+  }
+}
+#imageContainer div.biggerDiv div:nth-of-type(1) {
+  background-image: url("https://www.singulart.com/blog/wp-content/uploads/2023/11/Katsushika-Hokusai.jpeg");
+  background-size: cover;
+}
+#imageContainer div.biggerDiv div:nth-of-type(2) {
+  background-image: url("https://data.ukiyo-e.org/mfa/images/sc226721.jpg");
+  background-size: cover;
+}
+#imageContainer div.biggerDiv div:nth-of-type(3) {
+  background-image: url("https://wallpaperaccess.com/full/16290.jpg");
+  background-size: cover;
+}
+#imageContainer div.biggerDiv div:nth-of-type(4) {
+  background-image: url("https://as1.ftcdn.net/v2/jpg/05/25/09/02/1000_F_525090285_6Li8luqiXy5C1VYeLgGcc4yfQlbdGS51.jpg");
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */
