@@ -92,14 +92,23 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        p {
-            opacity: 0;
-        }
         div {
             @include grid(2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
             &:hover {
-                        transform: scale(1.1);
-                    }
+                background-image: none;
+                p {
+                    opacity: 1;
+                }
+                transition: opacity 1s;
+                animation: appearDescr 0.5s forwards;
+            }
         }
         @media screen and (min-width: 768px) {
             div {

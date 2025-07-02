@@ -149,6 +149,16 @@ img {
     transform: translateY(0);
   }
 }
+@keyframes appearDescr {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-image: none;
+    background-color: white;
+    opacity: 1;
+  }
+}
 header img {
   border-radius: 10px;
   box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.49);
@@ -235,18 +245,27 @@ nav ul li:nth-of-type(3) {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-#imageContainer div.biggerDiv p {
-  opacity: 0;
-}
 #imageContainer div.biggerDiv div {
   width: 45%;
   height: 200px;
   margin: 0.5em;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#imageContainer div.biggerDiv div p {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 #imageContainer div.biggerDiv div:hover {
-  transform: scale(1.1);
+  background-image: none;
+  transition: opacity 1s;
+  animation: appearDescr 0.5s forwards;
+}
+#imageContainer div.biggerDiv div:hover p {
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   #imageContainer div.biggerDiv div {

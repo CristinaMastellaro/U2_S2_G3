@@ -24,3 +24,14 @@ $nav-el: discovery, login, contact;
         }
 }
 
+@keyframes appearDescr {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-image: none;
+        background-color: white;
+        opacity: 1;
+    }
+}
